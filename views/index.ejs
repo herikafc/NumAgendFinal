@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendador de Postagens</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Postagens Agendadas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Conteúdo</th>
+            <th>Imagem</th>
+            <th>Data e Hora</th>
+            <th>Status</th>
+        </tr>
+        <% postagens.forEach(post => { %>
+        <tr>
+            <td><%= post.id %></td>
+            <td><%= post.conteudo %></td>
+            <td><img src="<%= post.imagem_url %>" width="100"></td>
+            <td><%= post.data_hora %></td>
+            <td><%= post.status %></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
