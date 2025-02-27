@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Postagem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- 📝 Seção de Agendamento -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <h1 class="text-2xl font-bold text-red-600 flex items-center">
+                <img src="https://res.cloudinary.com/dlkk6vtx3/image/upload/v1738765371/post_LC_scxyss.png" alt="Ícone" class="w-10 h-10 mr-2">
+                AGENDAR POSTAGEM
+            </h1>
+
+            <form id="uploadForm" enctype="multipart/form-data" class="mt-4">
+                <label class="block text-gray-700 font-semibold">Legenda:</label>
+                <textarea id="conteudo" name="conteudo" required class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-red-400"></textarea>
+
+                <label class="block text-gray-700 font-semibold mt-3">Imagem:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" required class="w-full border p-2 rounded-lg cursor-pointer">
+
+                <label class="block text-gray-700 font-semibold mt-3">Data e Hora:</label>
+                <input type="datetime-local" id="data_hora" name="data_hora" required class="w-full border p-2 rounded-lg">
+
+                <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 w-full rounded-lg mt-4 transition">
+                    Agendar Postagem
+                </button>
+            </form>
+
+            <div id="statusMessage" class="hidden mt-4 p-3 rounded-lg text-white text-center"></div>
+
+            <h2 class="text-xl font-bold text-green-700 mt-6">📸PREVIEW DE AGENDAMENTO:</h2>
+            <div id="preview" class="bg-gray-200 p-3 rounded-lg mt-2"></div>
+        </div>
+
+        <!-- Lista de Postagens -->
+        <div class="bg-white shadow-lg rounded-lg p-6 overflow-y-auto max-h-[80vh]">
+            <h2 class="text-2xl font-bold text-red-600">POSTAGENS AGENDADAS:</h2>
+            <ul id="postagens" class="mt-4 space-y-4"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

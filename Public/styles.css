@@ -1,0 +1,107 @@
+/* styles.css */
+
+/* Importando as fontes Gebuk e Genova */
+@import url('https://fonts.googleapis.com/css2?family=Gebuk:wght@700&family=Genova:wght@400&display=swap');
+
+.icone {
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+body {
+    font-family: 'Genova', sans-serif;
+    background-color: #faf7f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #5e6837;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    font-family: 'Gebuk', sans-serif;
+    color: #b22222;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    color: #5e6837;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+textarea, input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #b22222;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Gebuk', sans-serif;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5e6837;
+}
+
+#preview {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#preview img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#mensagem {
+    display: none; /* Mantém oculta por padrão */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+li img {
+    max-width: 200px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
